@@ -24,32 +24,58 @@
                         <form action="#" method="POST" id="add_form">
 
                         <div class="row">
-                <div class="col-md-2">
-                  <h5>Packing Khata</h5>
-                </div>
+                            <div class="col-md-2">
+                              <h5>Invoice Number</h5>
+                            </div>
               
-                <div class="col-md-2">
-                  <select name="product_khata" class="form-select form-control" aria-label="Default select example">
-                    <option value="">Khata#</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                </div>
+                            <div class="col-md-2">
+                            <input type="number" name="product_invoice" class="form-control"
+                                          placeholder="Invoice#" required>
+                            </div>
                 
-                <div class="col-md-2">
-                  <h5>Quality</h5>
-                </div>
+                            <div class="col-md-2">
+                                <h5 for="date">Date</h5>
+                            </div>
                 
-                <div class="col-md-2">
-                    <select name="product_quality" class="form-select form-control" aria-label="Default select example">
-                        <option value="">Quality</option>
-                        <option value="good">Good</option>
-                        <option value="average">Average</option>
-                        <option value="bad">Bad</option>
-                      </select>
-                </div>
-              </div>
+                            <div class="col-md-2">
+                              <input type="date" class="form-control" name="product_date">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2">
+                              <h5>Packing Khata</h5>
+                            </div>
+              
+                            <div class="col-md-2">
+                             <select name="product_khata" class="form-select form-control" aria-label="Default select example">
+                                <option value="">Khata#</option>
+                                 <option value="1">One</option>
+                                 <option value="2">Two</option>
+                                 <option value="3">Three</option>
+                             </select>
+                            </div>
+                
+                            <div class="col-md-2">
+                                <h5>Quality</h5>
+                            </div>
+                
+                            <div class="col-md-2">
+                                <select name="product_quality" class="form-select form-control" aria-label="Default select example">
+                                    <option value="">Quality</option>
+                                    <option value="good">Good</option>
+                                    <option value="average">Average</option>
+                                    <option value="bad">Bad</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <h5>Width</h5>
+                            </div>
+                            <div class="col-md-2">
+                            <input type="text" name="product_width" class="form-control"
+                                          placeholder="width" required>
+                            </div>
+                        </div>
                      <table>
                         <tbody>
                             <tr>
@@ -109,7 +135,7 @@
         $(document).ready(function() {
             $(".add_item_btn").click(function(e){
                 e.preventDefault();
-                $("#show_item").prepend(`<div class="row append_item">
+                $("#show_item").append(`<div class="row append_item">
                                     <div class="col mb-3">
                                          <input type="number" name="product_bill[]" class="form-control"
                                           placeholder="Bill#" required>
